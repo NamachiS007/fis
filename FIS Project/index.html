@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIS</title>
+
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Date Picker CSS Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="Assets/FIS image.jpg" alt="" srcset=""></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#events">Events</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="tabs-wrapper">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#pane1" data-toggle="tab"><b>Chevron</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pane2" data-toggle="tab"><b>Intuit</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pane3" data-toggle="tab"><b>Paypal</b></a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="pane1" class="tab-pane active">
+                        <div class="form-group">
+                            <label for="success-rate1">Success Rate: </label>
+                            <input type="number" id="success-rate1" name="success-rate1" placeholder="Success rate Tab-1" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="failure-rate1">Failure Rate: </label>
+                            <input type="number" id="failure-rate1" name="failure-rate1" placeholder="Failure rate Tab-1" min="0" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="average-rate1">Average Rate: </label>
+                            <input type="number" id="average-rate1" name="average-rate1" placeholder="Average rate Tab-1" min="0" max="100" step="1">
+                        </div>
+
+                        <hr class="divider" style="border: 1px solid #dee2e6; margin-top: 20px;">
+                        
+                        <div class="left-side">
+                            <div class="form-group form-group-horizontal">
+                                <label for="start-date" style="margin-right: 5px; margin-top: 10px;">Start Date:</label>
+                                <input type="text" id="start-date" placeholder="MM/DD/YYYY" name="start-date">
+                                <input type="text" id="start-time" name="start-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <div class="form-group form-group-horizontal">
+                                <label for="end-date" style="margin-right: 5px; margin-top: 10px;">End Date:</label>
+                                <input type="text" id="end-date" placeholder="MM/DD/YYYY" name="end-date">
+                                <input type="text" id="end-time" name="end-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <button class="btn" onclick="calculateSuccessRate()">Run</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="pane2" class="tab-pane">
+                        <div class="form-group">
+                            <label for="success-rate1">Success Rate: </label>
+                            <input type="number" id="success-rate1" name="success-rate1" placeholder="Success rate Tab-2" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="failure-rate1">Failure Rate: </label>
+                            <input type="number" id="failure-rate1" name="failure-rate1" placeholder="Failure rate Tab-2" min="0" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="average-rate1">Average Rate: </label>
+                            <input type="number" id="average-rate1" name="average-rate1" placeholder="Average rate Tab-2" min="0" max="100" step="1">
+                        </div>
+                        
+                        <hr class="divider" style="border: 1px solid #dee2e6; margin-top: 20px;">
+                        
+                        <div class="left-side">
+                            <div class="form-group form-group-horizontal">
+                                <label for="start-date" style="margin-right: 5px; margin-top: 10px;">Start Date:</label>
+                                <input type="text" id="start-date" placeholder="MM/DD/YYYY" name="start-date">
+                                <input type="text" id="start-time" name="start-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <div class="form-group form-group-horizontal">
+                                <label for="end-date" style="margin-right: 5px; margin-top: 10px;">End Date:</label>
+                                <input type="text" id="end-date" placeholder="MM/DD/YYYY" name="end-date">
+                                <input type="text" id="end-time" name="end-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <button class="btn" onclick="calculateSuccessRate()">Run</button>
+                        </div>
+                    </div>
+        
+                    <div id="pane3" class="tab-pane">
+                        <div class="form-group">
+                            <label for="success-rate1">Success Rate: </label>
+                            <input type="number" id="success-rate1" name="success-rate1" placeholder="Success rate Tab-3" min="0" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="failure-rate1">Failure Rate: </label>
+                            <input type="number" id="failure-rate1" name="failure-rate1" placeholder="Failure rate Tab-3" min="0" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="average-rate1">Average Rate: </label>
+                            <input type="number" id="average-rate1" name="average-rate1" placeholder="Average rate Tab-3" min="0" max="100" step="1">
+                        </div>
+                        
+                        <hr class="divider" style="border: 1px solid #dee2e6; margin-top: 20px;">
+                        
+                        <div class="left-side">
+                            <div class="form-group form-group-horizontal">
+                                <label for="start-date" style="margin-right: 5px; margin-top: 10px;">Start Date:</label>
+                                <input type="text" id="start-date" placeholder="MM/DD/YYYY" name="start-date">
+                                <input type="text" id="start-time" name="start-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <div class="form-group form-group-horizontal">
+                                <label for="end-date" style="margin-right: 5px; margin-top: 10px;">End Date:</label>
+                                <input type="text" id="end-date" placeholder="MM/DD/YYYY" name="end-date">
+                                <input type="text" id="end-time" name="end-time" placeholder="HH:MM:SS" value="00:00:00">
+                            </div>
+                            <button class="btn" onclick="calculateSuccessRate()">Run</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+    </main>
+
+    <!-- JS File Links -->
+    <script src="javascript.js"></script>
+    <!-- Date picker JS Links -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>

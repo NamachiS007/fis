@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #18ff9f;
+}
+
+nav {
+    background-color: #88d12c;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px lightgrey;
+    border-radius: 0.5rem; /* Navbar Border Edge Radius alteration CSS */
+    margin: 15px 20px; /* Navbar Border positioning CSS */
+}
+
+nav ul li img {
+    height: 30px;
+    width: 70px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #0561ee;
+}
+
+
+/* Main Content Start */
+main{
+    background-color: #fff;
+    height: 515px;
+    max-width: 100%;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    margin: 15px 20px;
+}
+
+.tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0; /* Ensure there's no margin between tabs and content */
+}
+
+.nav-tabs .nav-item {
+    margin: 0;
+}
+
+.nav-tabs .nav-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #88d12c;
+    border: 2px solid transparent;
+    border-radius: 0.25rem 0.25rem 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #88d12c;
+    border-color: #88d12c #88d12c transparent;
+    border-bottom: none;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 2px solid #dee2e6;
+    border: none;
+    background-color: #fff; /* Matches the active tab background */
+}
+
+.tab-pane {
+    display: none;
+    background-color: #fff; /* Matches the active tab background */
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* New CSS for selected tab color */
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:active,
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #88d12c;
+    border-color: #88d12c #88d12c transparent;
+    border-bottom: none;
+}
+
+
+/* Existing CSS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-group input {
+    padding: 5px; /* Padding inside the input field */
+    margin-top: 5px; /* Space between label and input */
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Button CSS code */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 15px;
+    position: relative;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    bottom: 20px; /* Adjust this value to control the vertical position */
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 0%;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.date-time-btn {
+    background-color: #28a745;
+}
+
+.date-time-btn:hover {
+    background-color: #218838;
+}
+
+/* New CSS for aligning date and time inputs */
+.form-group-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-group-horizontal input {
+    margin-right: 10px; /* Space between inputs */
+}
