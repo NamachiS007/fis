@@ -1,3 +1,12 @@
+// Webpage Refresh JS
+document.addEventListener('DOMContentLoaded', function () {
+    const refreshImage = document.getElementById('refresh-image');
+    refreshImage.addEventListener('click', function () {
+        // Refresh the page
+        location.reload();
+    });
+});
+
 // Tab Switching JS code
 document.addEventListener('DOMContentLoaded', function () {
     const tabLinks = document.querySelectorAll('.nav-link');
@@ -27,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Date & Time Picker JS code
+// Date & Time Picker JS code:
 document.addEventListener('DOMContentLoaded', function() {
     flatpickr("#start-date", {
         dateFormat: "m/d/Y", // Customize the date format here
